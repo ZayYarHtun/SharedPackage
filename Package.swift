@@ -9,7 +9,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "SharePackage",
-            targets: ["SharePackage", "AmitySDK"]),
+            targets: ["SharePackage", "MobileVLCKit", "Realm"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -22,9 +22,14 @@ let package = Package(
             name: "SharePackage",
             dependencies: []),
         .binaryTarget(
-                    name: "AmitySDK",
-                    url: "https://sdk.amity.co/sdk-release/ios-frameworks/5.33.0/AmitySDK.xcframework.zip",
-                    checksum: "23d036183c0d566412ac2bf76253171b73ba560b00562bfae9a6065b5cc6ebc9"
+                    name: "MobileVLCKit",
+                    url: "https://ascdependencies.s3.ap-southeast-1.amazonaws.com/Dependency/MobileVLCKit.xcframework.zip",
+                    checksum: "2a920618eca9065aaf2c3ba71c4772ca825fa7a54ca060838605cdc476e6da53"
+                ),
+        .binaryTarget(
+                    name: "Realm",
+                    url: "https://ascdependencies.s3.ap-southeast-1.amazonaws.com/Dependency/Realm.xcframework.zip",
+                    checksum: "67556683f58bf8d93e2ae393056165e8b87f22e711f07592913acad87b79e3c4"
                 )
        
     ]
