@@ -9,7 +9,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "SharePackage",
-            targets: ["SharePackage"]),
+            targets: ["SharePackage", "AmitySDK"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -23,8 +23,8 @@ let package = Package(
             dependencies: []),
         .binaryTarget(
                     name: "AmitySDK",
-                    url: "https://s3-ap-southeast-1.amazonaws.com/ekosdk-release/ios/amitysdk.zip",
-                    checksum: "07daaf84c065d5a80ec5311d4c11ca51b0e3c8e8e0da1a1938573e115218ec01"
+                    url: "https://sdk.amity.co/sdk-release/ios-frameworks/5.33.0/AmitySDK.xcframework.zip",
+                    checksum: "23d036183c0d566412ac2bf76253171b73ba560b00562bfae9a6065b5cc6ebc9"
                 )
        
     ]
